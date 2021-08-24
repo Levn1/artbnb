@@ -58,8 +58,8 @@ class PiecesController < ApplicationController
     @piece = Piece.find(params[:id])
   end
 
-  # Only allow a trusted parameter "white list" through.
-  def piece_params
-    params.require(:piece).permit(:name, :height, :length, :price, :category, :artist, :description, :user_id)
-  end
+    # Only allow a trusted parameter "white list" through.
+    def piece_params
+      params.require(:piece).permit(:name, :height, :length, :price, :category, :artist, :description, :user_id, :photo)
+    end
 end
