@@ -1,1 +1,47 @@
 // Specific CSS for your home-page
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2015/10/12/14/52/architecture-983920_1280.jpg");
+}
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  display: flex;
+  text-align: center;
+  margin-left: 180px;
+  margin-top: 280px;
+}
+
+p {
+  font-family: "Nanum Myeongjo", serif;
+}
+
+input {
+  border-radius: 1px;
+  border: none;
+}
+
+label {
+  font-size: large;
+  margin: auto 5px;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+.searchbar {
+  font-family: "Nanum Myeongjo", serif;
+  display: flex;
+  color: white;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 35px;
+  padding: 30px;
+  margin: 10px 100px;
+}
+
+.form-select {
+  border-style: none;
+  margin: auto 5px;
+  padding: 5px;
+}
