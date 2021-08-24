@@ -1,25 +1,26 @@
 // Specific CSS for your home-page
 
-h1 {
+.home-image {
+  background-color: wheat;
+}
+
+.home_title {
   font-family: "Cormorant Garamond", serif;
   display: flex;
   text-align: center;
   margin-left: 180px;
-  margin-top: 280px;
+  margin-top: 300px;
+  margin-bottom: 280px;
 }
 
-p {
+.searchbar label {
   font-family: "Nanum Myeongjo", serif;
+  color: white;
 }
 
-input {
+.home-input {
   border-radius: 1px;
   border: none;
-}
-
-label {
-  font-size: large;
-  margin: auto 5px;
 }
 
 input:focus {
