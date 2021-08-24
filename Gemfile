@@ -28,6 +28,10 @@ gem 'pundit'
 # gem devise for user login
 gem 'devise'
 
+#gem faker
+
+gem 'faker'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

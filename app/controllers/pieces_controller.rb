@@ -53,13 +53,13 @@ class PiecesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_piece
-      @piece = Piece.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_piece
+    @piece = Piece.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def piece_params
-      params.require(:piece).permit(:name, :height, :length, :price, :category, :artist, :description, :user_id)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def piece_params
+    params.require(:piece).permit(:name, :height, :length, :price, :category, :artist, :description, :user_id)
+  end
 end
