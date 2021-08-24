@@ -28,6 +28,10 @@ gem 'pundit'
 # gem devise for user login
 gem 'devise'
 
+# ADDING CLOUDINARY AND DOTENV
+gem 'cloudinary', '~> 1.16.0'
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
