@@ -1,26 +1,36 @@
-<h1>All art pieces</h1>
 
+<div class="container-index">
 
-<ul class="cards">
-<% @pieces.each do |piece| %>
-<li>
-<%= link_to piece_path(piece) do %>
-    <div class="card">
-      <%#= cl_image_tag(piece.photo.key, class:"card__image", height: 800, width: 800, crop: :thumb) %>
-      <div class="card__overlay">
-        <div class="card__header">
-          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-          <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
-          <div class="card__header-text">
-            <h3 class="card__title"><%= piece.name %></h3>
-            <span class="card__status">Price: <%= piece.price %>$ </span>
+  <div class="cards">
+  <% @pieces.each do |piece| %>
+  <li>
+  <%= link_to piece_path(piece) do %>
+      <div class="card">
+        <% if piece.photo.present? %>
+          <%= cl_image_tag(piece.photo.key, class:"card__image", height: 800, width: 800, crop: :thumb) %>
+        <% end %>
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+            <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+            <div class="card__header-text">
+              <h3 class="card__title"><%= piece.name %></h3>
+              <span class="card__status">Price: <%= piece.price %>$ </span>
+            </div>
           </div>
+          <p class="card__description"><%= piece.description %></p>
+          <p class="card__description">Category:<%= piece.category %> | Height: <%= piece.height %> | Length: <%= piece.length %></p>
         </div>
-        <p class="card__description"><%= piece.description %></p>
-        <p class="card__description">Category:<%= piece.category %> | Height: <%= piece.height %> | Length: <%= piece.length %></p>
       </div>
-    </div>
+    <% end %>
+    </li>
   <% end %>
-  </li>
-<% end %>
-</ul>
+  </div>
+
+  <div id="map"
+      style="width: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+</div>

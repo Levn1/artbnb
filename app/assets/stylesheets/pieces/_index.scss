@@ -5,13 +5,14 @@
   margin: 4rem 5vw;
   padding: 0;
   list-style-type: none;
+  flex-grow: 1;
 }
 
 .card {
   position: relative;
   --surface-color: #fff;
   display: block;
-  height: 200px;
+  height: 300px;
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
   text-decoration: none;
@@ -104,4 +105,14 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+.container-index {
+  display: flex;
+}
+
+#map{
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
