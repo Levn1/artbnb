@@ -17,16 +17,19 @@ puts 'Creating pieces'
 
 user_array = []
 15.times do
-  user = User.create!(
+  user = User.new(
     first_name: Faker::Name.name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     password: ['password1', 'password2', 'password3', 'password4', 'password5'].sample
   )
+  file = URI.open('https://picsum.photos/400')
+  user.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+  user.save!
   user_array << user
 
   piece_array = []
-  piece = Piece.create!(
+  piece = Piece.new(
     name: Faker::Book.title,
     height: Faker::Number.number(digits: 2),
     length: Faker::Number.number(digits: 2),
@@ -35,8 +38,12 @@ user_array = []
     description: Faker::Fantasy::Tolkien.poem,
     category: ['Sculpture', 'Photography', 'Oil Panting', 'Painting', 'Illustration'].sample,
     artist: Faker::Artist.name,
-    user: user_array.sample
+    user_id: user_array.sample.id
   )
+  puts "OK"
+  file = URI.open('https://source.unsplash.com/random')
+  piece.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+  piece.save!
   piece_array << piece
 
   random_day = rand(19..30)
