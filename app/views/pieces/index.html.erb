@@ -12,14 +12,20 @@
         <div class="card__overlay">
           <div class="card__header">
             <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-            <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+
+            <% if piece.user.photo.present? %>
+              <%= cl_image_tag(piece.user.photo.key, class:"card__thumb", height: 800, width: 800, crop: :thumb) %>
+            <% else %>
+              <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+            <% end %>
+
             <div class="card__header-text">
               <h3 class="card__title"><%= piece.name %></h3>
               <span class="card__status">Price: <%= piece.price %>$ </span>
             </div>
           </div>
           <p class="card__description"><%= piece.description %></p>
-          <p class="card__description">Category:<%= piece.category %> | Height: <%= piece.height %> | Length: <%= piece.length %></p>
+          <p class="card__description"><b>Category:</b> <%= piece.category %> | <b>Height:</b> <%= piece.height %> | <b>Length:</b> <%= piece.length %></p>
         </div>
       </div>
     <% end %>

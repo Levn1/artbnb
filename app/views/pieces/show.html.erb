@@ -1,1 +1,22 @@
-<h2>SHOW PAGE</h2>
+<div class="row justify-content-center mt-5">
+  <div class="col-md-8">
+    <div class="thumbnail">
+        <% if @piece.photo.present? %>
+          <%= cl_image_tag(@piece.photo.key, class:"card__image shadow p-3 mb-4 bg-white rounded") %>
+        <% end %>
+        <div class="d-flex justify-content-between">
+          <div class="caption w-50 ">
+            <h1 class="mt-2"><%= @piece.name %></h1>
+            <p><%= @piece.description %></p>
+          </div>
+          <div class="details">
+            <h2 class="piece_price_show"><%= @piece.price %>$ Per Day</h2>
+            <p class="mb-1"><b>Height:</b> <%= @piece.height %>cm | <b>Length:</b> <%= @piece.length %>cm</p>
+            <p class="m-0"><b>Category:</b> <%= @piece.category %></p>
+            <p><b>By:</b> <%= @piece.artist %></p>
+          </div>
+
+        </div>
+      </a>
+    </div>
+  </div>
