@@ -18,7 +18,7 @@
 }
 
 .btn-search {
-  color: #1F7A8C;
+  color: white;
   border: 1px solid #1F7A8C;
   background-color: #1F7A8C;
   padding: 2px 8px;
@@ -27,10 +27,11 @@
   font-size: smaller;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+}
 
-  .btn-search a {
+.nav-link {
   color: white;
-  }
+  text-decoration: none;
 }
 
 .btn-search:hover {
