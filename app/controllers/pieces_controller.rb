@@ -4,6 +4,13 @@ class PiecesController < ApplicationController
   # GET /pieces
   def index
     @pieces = policy_scope(Piece)
+
+    @markers = @pieces.geocoded.map do |piece|
+      {
+        lat: piece.latitude,
+        lng: piece.longitude
+      }
+    end
   end
 
   # GET /pieces/1
@@ -60,6 +67,6 @@ class PiecesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def piece_params
-      params.require(:piece).permit(:name, :height, :length, :price, :category, :artist, :description, :user_id, :photo)
+      params.require(:piece).permit(:name, :height, :address, :length, :price, :category, :artist, :description, :user_id, :photo)
     end
 end

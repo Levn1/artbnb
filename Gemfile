@@ -28,9 +28,10 @@ gem 'pundit'
 # gem devise for user login
 gem 'devise'
 
+# gem gecoder
+gem 'geocoder'
 
 #gem faker
-
 gem 'faker'
 
 # ADDING CLOUDINARY AND DOTENV

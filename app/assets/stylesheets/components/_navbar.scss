@@ -28,7 +28,7 @@
   opacity: 0.6;
   transition: opacity 0.3s ease;
 
-  a {
+  .btn-search a {
   color: white;
   }
 }
@@ -38,4 +38,8 @@
   background-color: #1F7A8C;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   color: white
+}
+
+.button{
+  color: black;
 }
