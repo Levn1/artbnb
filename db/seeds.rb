@@ -20,7 +20,6 @@ user_array = []
   user = User.create!(
     first_name: Faker::Name.name,
     last_name: Faker::Name.last_name,
-    # address: Faker::Address,
     email: Faker::Internet.email,
     password: ['password1', 'password2', 'password3', 'password4', 'password5'].sample
   )
@@ -32,6 +31,7 @@ user_array = []
     height: Faker::Number.number(digits: 2),
     length: Faker::Number.number(digits: 2),
     price: Faker::Number.number(digits: 4),
+    address: Faker::Address.city,
     description: Faker::Fantasy::Tolkien.poem,
     category: ['Sculpture', 'Photography', 'Oil Panting', 'Painting', 'Illustration'].sample,
     artist: Faker::Artist.name,
