@@ -1,0 +1,81 @@
+.new-page {
+  background-image: url("https://preview.redd.it/lg030zlyh6161.jpg?auto=webp&s=aae6f1439da483006c32efb4e4f6507e685ff9a5");
+  background-size: cover;
+}
+
+.form-control {
+  padding:10px;
+  border-radius:10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.new-title {
+  text-align: center;
+}
+
+.new-form {
+  background-color: rgba(225,229,242,0.3);
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.dimensions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-inputs {
+  padding: 25px;
+}
+
+.cat-pri {
+  display: flex;
+}
+
+#piece_category {
+  height: 38px;
+  border: 1px solid #4A4A4A;
+  padding: 5px 24px;
+  border-radius: 50px;
+}
+
+#file-upload-button {
+  border: 1px solid #4A4A4A;
+  padding: 5px 24px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.btn-ghost {
+  color: white;
+  border: 1px solid white;
+  padding: 5px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  align-items: center;
+}
+
+
+.btn-ghost:hover {
+  opacity: 1;
+
+  a {
+    color: white;
+  }
+}
+
+.btn {
+  text-align: center;
+}
+
+#piece_category {
+  outline: none;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+}

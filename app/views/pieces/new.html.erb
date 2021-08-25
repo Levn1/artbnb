@@ -1,4 +1,42 @@
-<h1>New Piece</h1>
+<div class="new-page">
 
-<%= render 'form', piece: @piece %>
-<%= link_to 'Back', pieces_path %>
+  <div class="row justify-content-center">
+
+    <div class="new-form mt-3">
+      <%= simple_form_for(@piece) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <div class="form-inputs">
+          <%= f.input :name, placeholder: "title of the piece" %>
+          <div class="dimensions">
+            <%= f.input :height, :label => "Height", placeholder: "in cm"  %>
+            <%= f.input :length, :label => "Length", placeholder: "in cm" %>
+          </div>
+          <%= f.input :price, :label => "Price ($) per day" %>
+          <%= f.input :address %>
+          <%= f.input :artist, placeholder: "full name" %>
+          <%= f.input :description, placeholder: "few words about the art piece" %>
+          <%= f.input :photo, as: :file %>
+          <div class="category d-flex justify-content-center">
+            <%= f.select :category, options_for_select(%w[Painting Photography Sculpture Illustrations]), prompt: "Choose your category" %>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mb-3 mt-3">
+          <div class="form-actions btn btn-ghost">
+            <%= f.button :submit %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="d-flex justify-content-center mt-3">
+    <%= link_to "Back", pieces_path, class: "btn btn-ghost" %>
+  </div>
+
+  <br><br>
+
+</div>
