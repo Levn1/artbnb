@@ -21,10 +21,9 @@
   color: white;
   border: 1px solid #1F7A8C;
   background-color: #1F7A8C;
-  padding: 2px 8px;
+  padding: 6px 16px;
   border-radius: 50px;
-  font-weight: lighter;
-  font-size: smaller;
+  font-weight: bold;
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
@@ -36,11 +35,7 @@
 
 .btn-search:hover {
   opacity: 0.8;
-  background-color: #1F7A8C;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  color: white
-}
-
-.button{
-  color: black;
+  color: white;
+  text-decoration: none;
 }

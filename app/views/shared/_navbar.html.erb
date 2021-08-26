@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to pieces_path, class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "logo2.png" %>
     <% end %>
 
@@ -7,9 +7,9 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="nav-item active btn-search" type="button">
-    <%= link_to "Start your Search", pieces_path , class: "nav-link" %>
-  </div>
+
+  <%= link_to "Rent your art", new_piece_path , class: "nav-link btn-search" %>
+
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
