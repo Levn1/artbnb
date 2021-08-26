@@ -2,6 +2,8 @@ class PiecesController < ApplicationController
   before_action :set_piece, only: [:show, :edit, :update, :destroy]
 
   # GET /pieces
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @pieces = policy_scope(Piece)
 
@@ -10,6 +12,12 @@ class PiecesController < ApplicationController
         lat: piece.latitude,
         lng: piece.longitude
       }
+    end
+
+    if params[:category].present?
+      @pieces = Piece.where("category ILIKE ?", "%#{params[:category]}%")
+    else
+      @pieces = Piece.all
     end
   end
 
