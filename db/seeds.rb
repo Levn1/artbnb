@@ -40,7 +40,6 @@ user_array = []
     artist: Faker::Artist.name,
     user_id: user_array.sample.id
   )
-  puts "OK"
   file = URI.open('https://source.unsplash.com/random')
   piece.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
   piece.save!
