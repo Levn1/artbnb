@@ -15,7 +15,9 @@ class PiecesController < ApplicationController
 
   # GET /pieces/1
   def show
+    @booking = Booking.new
     authorize @piece
+    authorize @booking
   end
 
   # GET /pieces/new
