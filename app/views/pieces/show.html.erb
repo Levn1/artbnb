@@ -9,14 +9,13 @@
           <h1 class="mt-2"><%= @piece.name %></h1>
           <p><%= @piece.description %></p>
           <div>
-
             <% if @piece.user == current_user %>
             <%= link_to "Edit", edit_piece_path(@piece), class: "btn btn-ghost-green"%>
             <% end %>
             <% if @piece.user == current_user %>
             <%= link_to "Delete", @piece, method: :delete, data: { confirm: "Are you sure you want to delete #{@piece.name}?" }, class: "btn btn-ghost-green" %>
             <% end %>
-
+            <%= link_to "Create a booking", new_piece_booking_path(@piece), class: "btn btn-ghost-green"%>
           </div>
         </div>
         <div class="details">

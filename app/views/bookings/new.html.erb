@@ -1,0 +1,23 @@
+<div class="row ">
+  <div class="col-xs-6 d-flex justify-content-around align-items-center">
+    <% if @piece.photo.present? %>
+    <%= cl_image_tag(@piece.photo.key, class:"card__image__booking shadow p-3 mt-3 bg-white rounded") %>
+    <% end %>
+  <div class="d-flex flex-column">
+    <h1 class=""><%= @piece.name %></h1>
+    <p><%= @piece.description %></p>
+    <div class="details">
+      <h2 class="piece_price_show_booking"><%= @piece.price %>$ Per Day</h2>
+      <p class="mb-1"><b>Height:</b> <%= @piece.height %>cm | <b>Length:</b> <%= @piece.length %>cm</p>
+      <p class="m-0"><b>Category:</b> <%= @piece.category %></p>
+      <p><b>By:</b> <%= @piece.artist %></p>
+      <div class="col-xs-6">
+        <input type="date">
+        <input type="date">
+        <p class="piece_price_show_booking mt-2">Total:</p>
+        <%= link_to "Confirm the booking", piece_bookings_path(@piece), class: "btn btn-ghost-green d-flex justify-content-center"%>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
