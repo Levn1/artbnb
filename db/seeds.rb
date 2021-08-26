@@ -36,7 +36,7 @@ user_array = []
     price: Faker::Number.number(digits: 4),
     address: Faker::Address.city,
     description: Faker::Fantasy::Tolkien.poem,
-    category: ['Sculpture', 'Photography', 'Oil Panting', 'Painting', 'Illustration'].sample,
+    category: ['Sculpture', 'Photography', 'Oil Painting', 'Painting', 'Illustration'].sample,
     artist: Faker::Artist.name,
     user_id: user_array.sample.id
   )
