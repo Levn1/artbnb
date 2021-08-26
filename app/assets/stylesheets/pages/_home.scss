@@ -1,116 +1,48 @@
 // Specific CSS for your home-page
-.home-image {
-  background-image: url("https://cdn.pixabay.com/photo/2015/10/12/14/52/architecture-983920_1280.jpg");
-  background-size: cover;
+
+
+.container-center {
   display: flex;
-  flex-direction: column;
-}
-
-.home_title {
-  margin-top: 350px;
-  margin-left: 200px;
-}
-
-.home-label {
-  color: #393a34;
-  font-size: larger;
-  background-color: #e1e5f2;
-  border-radius: 35px;
-  padding: 14px;
-  width: 180px;
-  border-style: solid;
-  border-width: thin;
-}
-
-.home-label-location {
-  color: #393a34;
-  font-size: larger;
-  background-color: #e1e5f2;
-  border-radius: 35px;
-  padding: 13px;
-  width: 152px;
-  border-style: solid;
-  border-width: thin;
-}
-
-.home-input {
-  border-radius: 35px;
-  border: none;
-  padding: 16px;
-  position: absolute;
-  margin-left: -59px;
-  width: 182px;
-  border-style: solid;
-  border-width: thin;
-}
-
-.home-input-location {
-  border-radius: 35px;
-  border: none;
-  padding: 16px;
-  position: absolute;
-  margin-left: -59px;
-  width: 182px;
-  border-style: solid;
-  border-width: thin;
-}
-
-.home-input-submit {
-  border-radius: 35px;
-  border: none;
-  padding: 16px;
-  position: absolute;
-  margin-left: -100px;
-  width: 84px;
-  border-style: solid;
-  border-width: thin;
-  margin-top: 5px;
-}
-
-.home-input:focus {
-  outline: none;
-  border-style: solid;
-  border-width: thin;
-}
-
-.home-input-location:focus {
-  outline: none;
-  border-style: solid;
-  border-width: thin;
-}
-
-.home-input-submit:focus {
-  outline: none;
-  border-style: solid;
-  border-width: thin;
-}
-
-.searchbar {
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 35px;
-  padding: 30px;
-  margin: 10px 100px;
   align-items: center;
+  background-color: #022B3A;
+  margin-top: 30px;
+
+  height: 600px;
+
+  color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
 
-.content-navbar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.content-details {
-  margin: 0;
-  align-items: center;
-}
-
-.form-select {
-  border-style: none;
-  outline: none;
-  margin: auto 5px;
-  padding: 19px;
-  border-radius: 35px;
+.container-center .btn-search {
+  opacity: 1;
   font-size: larger;
-  border-style: solid;
-  border-width: thin;
+  width: 250px;
+  padding: 8px 24px;
+}
+
+.btn-search:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.text-home {
+  text-align: center;
+  padding-top: 250px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.highlight {
+  border-radius: 4px;
+  color: #1F7A8C;
+  background-color: #E1E5F2;
+  padding: 0px 6px;
+}
+
+.container-center img {
+  width: 700px;
+  height: 600px;
+  object-fit: cover;
 }
