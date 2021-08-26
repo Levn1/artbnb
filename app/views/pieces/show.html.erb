@@ -8,6 +8,14 @@
           <div class="caption w-50 ">
             <h1 class="mt-2"><%= @piece.name %></h1>
             <p><%= @piece.description %></p>
+            <div>
+              <% if policy(@piece).edit? %>
+                <%= link_to "Edit", edit_piece_path(@piece), class: "btn btn-ghost-green"%>
+              <% end %>
+              <% if policy(@piece).destroy? %>
+                <%= link_to "Delete", @piece, method: :delete, data: { confirm: "Are you sure you want to delete #{@piece.name}?" }, class: "btn btn-ghost-green" %>
+              <% end %>
+            </div>
           </div>
           <div class="details">
             <h2 class="piece_price_show"><%= @piece.price %>$ Per Day</h2>
@@ -15,7 +23,6 @@
             <p class="m-0"><b>Category:</b> <%= @piece.category %></p>
             <p><b>By:</b> <%= @piece.artist %></p>
           </div>
-
         </div>
       </a>
     </div>
