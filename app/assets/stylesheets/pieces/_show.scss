@@ -1,5 +1,5 @@
-.piece_price_show{
-  background-color: #1F7A8C;
+.piece_price_show {
+  background-color: #1f7a8c;
   color: white;
   text-align: center;
   padding: 3px;
@@ -8,3 +8,18 @@
   font-weight: 500;
 }
 // mt-2 bg-primary p-1 text-white text-center
+.btn-ghost-green {
+  color: white;
+  background-color: #80afbb;
+  border: 1px solid white;
+  padding: 5px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  align-items: center;
+}
+
+.btn-ghost-green:hover {
+  color: black;
+}

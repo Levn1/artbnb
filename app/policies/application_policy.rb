@@ -29,11 +29,11 @@ class ApplicationPolicy
   end
 
   def edit?
-    update?
+    record.user == user
   end
 
   def destroy?
-    false
+    record.user == user
   end
 
   class Scope
