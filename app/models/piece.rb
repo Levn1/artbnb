@@ -8,5 +8,5 @@ class Piece < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   OPTIONS = ['Sculpture', 'Photography', 'Oil Panting', 'Painting', 'Illustration']
-  validates_inclusion_of :field, in: OPTIONS
+  validates :category, inclusion: { in: OPTIONS }
 end
