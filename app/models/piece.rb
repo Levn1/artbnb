@@ -7,6 +7,6 @@ class Piece < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
-  OPTIONS = ['Sculpture', 'Photography', 'Oil Panting', 'Painting', 'Illustration']
+  OPTIONS = ['Sculpture', 'Photography', 'Oil Painting', 'Painting', 'Illustration']
   validates :category, inclusion: { in: OPTIONS }
 end
