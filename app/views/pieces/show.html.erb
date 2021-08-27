@@ -10,12 +10,12 @@
           <p><%= @piece.description %></p>
           <div>
             <% if @piece.user == current_user %>
-            <%= link_to "Edit", edit_piece_path(@piece), class: "btn btn-ghost-green"%>
+            <%= link_to "Edit", edit_piece_path(@piece), class: "btn btn-search"%>
             <% end %>
             <% if @piece.user == current_user %>
-            <%= link_to "Delete", @piece, method: :delete, data: { confirm: "Are you sure you want to delete #{@piece.name}?" }, class: "btn btn-ghost-green" %>
+            <%= link_to "Delete", @piece, method: :delete, data: { confirm: "Are you sure you want to delete #{@piece.name}?" }, class: "btn btn-search" %>
             <% end %>
-            <%= link_to "Create a booking", new_piece_booking_path(@piece), class: "btn btn-ghost-green button-show"%>
+            <%= link_to "Create a booking", new_piece_booking_path(@piece), class: "btn btn-search" unless @piece.user == current_user%>
           </div>
         </div>
         <div class="details">
