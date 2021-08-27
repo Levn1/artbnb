@@ -33,7 +33,7 @@ user_array = []
     name: Faker::Book.title,
     height: Faker::Number.number(digits: 2),
     length: Faker::Number.number(digits: 2),
-    price: Faker::Number.number(digits: 4),
+    price: Faker::Number.number(digits: 2),
     address: Faker::Address.city,
     description: Faker::Fantasy::Tolkien.poem,
     category: ['Sculpture', 'Photography', 'Oil Painting', 'Painting', 'Illustration'].sample,
