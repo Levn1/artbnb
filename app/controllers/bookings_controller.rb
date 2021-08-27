@@ -2,7 +2,8 @@ class BookingsController < ApplicationController
   def new
     @piece = Piece.find(params[:piece_id])
     @booking = Booking.new
-    authorize @piece
+    @booking.piece = @piece
+    authorize @booking
   end
 
   def create
@@ -11,13 +12,26 @@ class BookingsController < ApplicationController
     @booking.piece = @piece
     @booking.user = current_user
     authorize @piece
-    @booking.save
-    redirect_to piece_path(@piece)
+    authorize @booking
+
+    if @booking.save
+      redirect_to piece_booking_path(@booking.id, @piece.id), notice: 'your booking has been sent!'
+    else
+      render :new
+    end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    start = @booking.date_start
+    endd = @booking.date_end
+    @total = (start-endd).to_i * -1
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:content)
+    params.require(:booking).permit(:date_start, :date_end)
   end
 end
