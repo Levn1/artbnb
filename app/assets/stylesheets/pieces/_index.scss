@@ -139,6 +139,11 @@
   padding-right: 25px;
   font-weight: bold;
   font-size: large;
+  transition: 300ms;
+}
+
+.search_category:hover{
+  transform: translateY(-10px);
 }
 
 // .categories-btn{
