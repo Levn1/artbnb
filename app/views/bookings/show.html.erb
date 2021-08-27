@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="d-flex justify-content-center mt-5">
+    <div class="thumbnail d-flex">
+      <% if @booking.piece.photo.present? %>
+      <%= cl_image_tag(@booking.piece.photo.key, class:"card__image shadow p-3 mb-4 bg-white rounded w-50") %>
+      <% end %>
+      <div class="align-self-center ml-5">
+        <h2>Your booking has been sent!</h2>
+        <p>From: <%= @booking.date_start %> To: <%= @booking.date_end %></p>
+        <p class="m-0"><b>Total days:</b> <%= @total %></p>
+        <p class="m-0"><b>Total amount:</b> $<%= @booking.piece.price * @total %></p>
+        <p class="m-0"><b>Status: </b><%= @booking.status %></p>
+        <p class="m-0"><b>Booking reference: </b>#<%= @booking.id %></p>
+      </div>
+    </div>
+  </div>
+</div>
